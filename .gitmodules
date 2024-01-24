@@ -1,0 +1,3 @@
+[submodule "repo/skin.eminence.2"]
+	path = repo/skin.eminence.2
+	url = git@github.com:dkoch84/skin.eminence.2.git
