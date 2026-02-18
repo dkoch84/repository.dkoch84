@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="repository.dank" name="dank_repository" version="1.0.0" provider-name="dkoch84">
+<addons><addon id="plugin.video.watchorder" name="Watch Order" version="0.1.0" provider-name="dkoch84">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">TV Collections — group related TV shows</summary>
+        <description lang="en_GB">Collection-aware TV show browser. Related shows are collapsed into a single entry in the title listing, just like Kodi's movie collections. Manage collections via context menus. Use as a replacement for library://video/tvshows/titles/ in skin widgets and shortcuts. Supports tag filtering (e.g. plugin://plugin.video.watchorder/?tag=anime).</description>
+        <platform>all</platform>
+        <license>MIT</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="repository.dank" name="dank_repository" version="1.0.0" provider-name="dkoch84">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/dkoch84/repository.dkoch84/main/repo/zips/addons.xml</info>
