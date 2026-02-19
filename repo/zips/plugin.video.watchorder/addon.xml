@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.watchorder"
        name="Watch Order"
-       version="0.6.0"
+       version="0.7.0"
        provider-name="dkoch84">
     <requires>
         <import addon="xbmc.python" version="3.0.1" />
+        <import addon="script.module.myconnpy" version="8.0.18" optional="true" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">TV Collections — group related TV shows</summary>
-        <description lang="en_GB">Collection-aware TV show browser. Related shows are collapsed into a single entry in the title listing, just like Kodi's movie collections. Manage collections via context menus. Use as a replacement for library://video/tvshows/titles/ in skin widgets and shortcuts. Supports tag filtering (e.g. plugin://plugin.video.watchorder/?tag=anime).</description>
+        <summary lang="en_GB">Collection-aware TV &amp; movie browser with linked movies, tag filtering, and shared collections</summary>
+        <description lang="en_GB">Replaces the standard library browser with a collection-aware TV and movie browser. Group related TV shows and movies into collections, manage linked movies across franchise boundaries, and sync your setup across multiple Kodi installs via MySQL.
+
+Features:
+- TV Collections: combine related shows into one item in the title listing.
+- Movie Collections: group related movies, or import existing Kodi movie sets via Migrate Movie Sets in addon settings.
+- Linked Movies: movies linked to a TV show appear alongside its seasons and episodes. Move them between the show listing and collection level via context menu.
+- Shared Collections: sync collection config across Kodi installs using the same MySQL server. Enable in addon settings.
+- Tag Filtering: browse TV shows and movies by library tag. Root menu includes dedicated tag folders.
+- Flatten Seasons: respects Kodi's "Flatten TV show seasons" setting, skipping single-season shows straight to episodes.
+- Select First Unwatched: respects Kodi's "Select first unwatched TV show season/episode" setting.
+- Include Specials: respects Kodi's "Include All Seasons and Specials" setting.
+- Forced Views: sets skin forced views for seasons, episodes, TV shows, and movies on first run.
+
+All collections are managed entirely through context menus. Use as a replacement for library://video/ in skin widgets and shortcuts.</description>
         <platform>all</platform>
         <license>MIT</license>
         <assets>
